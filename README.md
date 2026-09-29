@@ -1,73 +1,141 @@
-# Welcome to your Lovable project
+# Clause Creator Studio
 
-## Project info
+<p align="center">
+  <strong>Crie, personalize e gerencie contratos em um só lugar.</strong><br/>
+  Uma plataforma web para organizar modelos, montar documentos jurídicos e acompanhar contratos com uma experiência simples e intuitiva.
+</p>
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18-149eca?logo=react&logoColor=white" alt="React 18" />
+  <img src="https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-5-646cff?logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-3-06b6d4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/shadcn%2Fui-components-000000?logo=shadcnui&logoColor=white" alt="shadcn/ui" />
+</p>
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Sobre o projeto
 
-**Use Lovable**
+O **Clause Creator Studio** é uma aplicação voltada à criação e gestão de contratos. O sistema reúne ferramentas para elaborar documentos a partir de modelos, personalizar cláusulas, revisar informações e acompanhar contratos em um ambiente centralizado.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+A aplicação também oferece recursos de conta de usuário, área administrativa e organização de modelos e cláusulas.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Funcionalidades
 
-**Use your preferred IDE**
+* **Editor de contratos:** criação e edição de documentos com campos personalizáveis.
+* **Modelos prontos:** galeria de modelos para iniciar documentos com mais agilidade.
+* **Biblioteca de cláusulas:** consulta e organização de cláusulas reutilizáveis.
+* **Pré-visualização e revisão:** confira o conteúdo do contrato antes de finalizar.
+* **Exportação em PDF:** gere uma versão do documento para compartilhamento ou armazenamento.
+* **Histórico de contratos:** acompanhe documentos criados anteriormente.
+* **Assinatura desenhada:** componente de assinatura para inserir uma representação manuscrita no documento.
+* **Autenticação:** telas de cadastro, login e recuperação de senha.
+* **Perfil e painel administrativo:** áreas dedicadas à conta e à administração.
+* **Interface responsiva:** componentes construídos com React, Tailwind CSS e shadcn/ui.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+> **Observação:** a ferramenta auxilia na elaboração e organização de documentos, mas não substitui a análise de um profissional jurídico. Revise o conteúdo e a adequação legal de cada contrato antes de utilizá-lo.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Tecnologias
 
-Follow these steps:
+| Tecnologia            | Utilização                          |
+| --------------------- | ----------------------------------- |
+| React 18              | Construção da interface             |
+| TypeScript            | Tipagem estática                    |
+| Vite                  | Servidor de desenvolvimento e build |
+| Tailwind CSS          | Estilização                         |
+| shadcn/ui e Radix UI  | Componentes de interface            |
+| React Router          | Navegação entre páginas             |
+| React Hook Form e Zod | Formulários e validação             |
+| Tiptap                | Edição de conteúdo                  |
+| jsPDF e html2canvas   | Geração de documentos PDF           |
+| Framer Motion         | Animações                           |
+| TanStack Query        | Gerenciamento de estado assíncrono  |
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Requisitos
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+* Node.js (versão LTS recomendada)
+* npm ou Bun
+* Acesso à API configurada para o ambiente, quando aplicável
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Instalação e execução
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Clone o repositório:
+
+```bash
+git clone https://github.com/brenodev2007/clause-creator-studio.git
+cd clause-creator-studio
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Configure as variáveis de ambiente, se necessário. Para produção, utilize o arquivo de exemplo:
+
+```bash
+cp .env.production.example .env.production
+```
+
+Edite os valores de acordo com seu ambiente:
+
+```env
+VITE_API_URL=https://api.seudominio.com
+VITE_APP_NAME=ContrateMe
+VITE_ENV=production
+```
+
+Inicie o servidor local:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+O Vite exibirá no terminal o endereço local para acessar a aplicação.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Scripts disponíveis
 
-**Use GitHub Codespaces**
+| Comando             | Descrição                                     |
+| ------------------- | --------------------------------------------- |
+| `npm run dev`       | Inicia o servidor de desenvolvimento          |
+| `npm run build`     | Gera a versão de produção                     |
+| `npm run build:dev` | Gera o build usando o modo de desenvolvimento |
+| `npm run preview`   | Executa uma prévia local do build             |
+| `npm run lint`      | Analisa o código com ESLint                   |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Build de produção
 
-## What technologies are used for this project?
+Para gerar os arquivos otimizados:
 
-This project is built with:
+```bash
+npm run build
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Os arquivos gerados ficam no diretório `dist/` e podem ser publicados em um serviço de hospedagem estática compatível com aplicações Vite. Configure as variáveis de ambiente e o redirecionamento de rotas conforme a infraestrutura utilizada.
 
-## How can I deploy this project?
+## Estrutura do projeto
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+```text
+src/
+├── components/       # Componentes reutilizáveis e interface
+├── context/          # Contextos de autenticação e tokens
+├── data/             # Modelos e conteúdos de referência
+├── hooks/            # Hooks personalizados
+├── lib/              # Utilitários
+├── pages/            # Páginas e fluxos da aplicação
+└── types/            # Tipos TypeScript
+```
 
-## Can I connect a custom domain to my Lovable project?
+## Autor
 
-Yes, you can!
+**Breno Soriani**
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+* GitHub: [@brenodev2007](https://github.com/brenodev2007)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+<p align="center">
+  Desenvolvido para tornar a criação e a organização de contratos mais prática.
+</p>
