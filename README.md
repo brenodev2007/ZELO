@@ -1,4 +1,4 @@
-# Clause Creator Studio
+# ZELO
 
 <p align="center">
   <strong>Crie, personalize e gerencie contratos em um só lugar.</strong><br/>
